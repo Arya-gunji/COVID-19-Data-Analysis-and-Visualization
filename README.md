@@ -1,81 +1,43 @@
 # COVID-19 Data Analysis and Visualization
 
-## Project Overview
-This project focuses on analyzing and visualizing COVID-19 data using Python. It explores confirmed cases, deaths, recoveries and active cases across different countries and WHO regions.
+A Python data analysis project using the supplied country-wise COVID-19 dataset. It includes a Jupyter Notebook for exploratory data analysis and a Streamlit dashboard for interactive visualization.
 
-## Objectives
-- Explore and understand the COVID-19 dataset.
-- Check missing values and duplicate records.
-- Perform descriptive statistical analysis.
-- Identify the top 5 countries by confirmed cases.
-- Compare confirmed cases and deaths.
-- Visualize relationships between COVID-19 metrics.
-
-## Dataset
-The project uses `country_wise_latest.csv`.
-
-The dataset includes information such as:
-- Country/Region
-- Confirmed Cases
-- Deaths
-- Recovered
-- Active Cases
-- Confirmed Cases Last Week
-- WHO Region
-
-## Technologies Used
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Jupyter Notebook
-
-## Analysis and Visualizations
-
-1. **Data Exploration**
-   - Displayed dataset records, shape, columns and data types.
-   - Checked missing values and duplicate records.
-
-2. **Top 5 Countries Analysis**
-   - Identified the top 5 countries based on confirmed cases.
-   - Compared last week's confirmed cases with current confirmed cases.
-
-3. **Correlation Heatmap**
-   - Visualized correlations between confirmed cases, deaths, recoveries and active cases.
-
-4. **Scatter Plot**
-   - Compared confirmed cases and deaths.
-   - Used WHO Region to distinguish countries by region.
-
-## Project Structure
+## Project files
 
 ```text
 COVID-19-Data-Analysis-and-Visualization/
-│
-├── README.md
 ├── COVID_19_Data_Analysis_and_Visualization.ipynb
-└── country_wise_latest.csv
+├── country_wise_latest.csv
+├── app.py
+├── requirements.txt
+└── README.md
 ```
 
-## How to Run the Project
+## Technologies
+- Python
+- Pandas and NumPy
+- Matplotlib and Seaborn
+- Plotly and Streamlit
+- Jupyter Notebook
 
-1. Clone this repository.
-2. Install the required libraries:
+## Run the notebook
+Install the packages and open the notebook in Jupyter:
 
-   `pip install pandas numpy matplotlib seaborn jupyter`
+```bash
+pip install -r requirements.txt
+jupyter notebook
+```
 
-3. Place `country_wise_latest.csv` in the same folder as the notebook.
-4. Start Jupyter Notebook:
+Open `COVID_19_Data_Analysis_and_Visualization.ipynb` and run the cells.
 
-   `jupyter notebook`
+## Run the dashboard
+From this project folder, run:
 
-5. Open the notebook and run the cells.
+```bash
+streamlit run app.py
+```
 
-## Project Purpose
-This project demonstrates practical skills in data exploration, data cleaning checks, statistical analysis and data visualization using Python.
+The dashboard includes region and country filters, summary metrics, country and region charts, a confirmed-cases-versus-deaths chart, and a filtered-data download.
 
-## Author
-**Arya Gunji**
-
-GitHub: https://github.com/Arya-gunji
+## Dataset note
+The included CSV is a country-wise snapshot supplied for this project. The dashboard does not display live COVID-19 statistics.
